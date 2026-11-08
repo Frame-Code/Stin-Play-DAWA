@@ -1,0 +1,21 @@
+.baner {
+    background-color: rgb(94, 169, 94);
+    padding: 150px;
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    color: white;
+    overflow-wrap: break-word;
+    
+}
+
+.subtitle {
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    color: white;
+    font-weight: bold;
+}
