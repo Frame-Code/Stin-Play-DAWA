@@ -1,22 +1,17 @@
-<div class="navbar navbar-dark header">
-    <h1>
+<div class="navbar navbar-dark header fixed-top">
+    <h1 class="title">
         {{ title}} 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.467 8.467" id="play" class="icon-play"><path fill-rule="evenodd" d="M16 1c-2.512.001-4.98.642-7.18 1.848a1 1 0 1 0 .961 1.754A12.952 12.952 0 0 1 16 3c7.19-.004 13 5.808 13 13s-5.808 13-13 13S3 23.192 3 16c0-2.178.545-4.321 1.588-6.232a1 1 0 1 0-1.754-.957A15.005 15.005 0 0 0 1 16c0 8.272 6.728 15 15 15s15-6.728 15-15S24.273.996 16 1zM6.115 5.102a1 1 0 0 0-.722.29 1 1 0 0 0 0 1.415 1 1 0 0 0 1.416 0 1 1 0 0 0-.002-1.414 1 1 0 0 0-.692-.291zm5.889 3.896a1 1 0 0 0-1.006 1.004v11.996a1 1 0 0 0 1.477.879l11.007-6.002a1 1 0 0 0 0-1.75L12.475 9.123a1 1 0 0 0-.471-.125zM13 11.686l7.92 4.31L13 20.314v-8.628z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" paint-order="stroke fill markers" style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal" transform="scale(.26458)" fill="#000000"></path></svg>
-        <h3>
+        <h3 class="pt-2">
             {{ subtitle}}
         </h3>
     </h1>
     
     <div class="input-group rounded search">
-        <input type="search" class="form-control rounded" placeholder="Busca tu curso preferido" aria-label="Search" aria-describedby="search-addon" />
-        <span class="input-group-text border-0" id="search-addon">
-            <a href="#">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search"><path fill="#000" fill-rule="evenodd" d="M14.192 15.606a7 7 0 1 1 1.414-1.414l5.172 5.172a1 1 0 0 1-1.414 1.414l-5.172-5.172ZM15 10a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" clip-rule="evenodd"></path></svg>
-            </a>
-        </span>
+        <input type="search" class="form-control rounded" placeholder="Escribe aquí para buscar tu curso preferido" aria-label="Search" aria-describedby="search-addon" />
     </div>
 
-    <a class="cursos" href="#">
+    <a class="cursos pt-2" href="#">
         <p>
             Ver cursos
         </p>
@@ -24,5 +19,8 @@
     <button class="btn btn-success btn-registrar-curso">
     + Registrar nuevo curso
     </button>
-    <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="user"><path d="M16,0.5C7.45001,0.5,0.5,7.45001,0.5,16S7.45001,31.5,16,31.5S31.5,24.54999,31.5,16S24.54999,0.5,16,0.5z M26.54999,22.67999C24.39001,19.59998,20.44,17.64001,16,17.64001s-8.40002,1.95996-10.53998,5.06C4.22998,20.76001,3.5,18.45996,3.5,16C3.5,9.10999,9.10999,3.5,16,3.5S28.5,9.10999,28.5,16C28.5,18.45996,27.78003,20.75,26.54999,22.67999z" fill="#000000"></path><circle cx="16" cy="11" r="4.97" fill="#000000"></circle></svg>
+    <a href="#" class="user-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="user"><path d="M16,0.5C7.45001,0.5,0.5,7.45001,0.5,16S7.45001,31.5,16,31.5S31.5,24.54999,31.5,16S24.54999,0.5,16,0.5z M26.54999,22.67999C24.39001,19.59998,20.44,17.64001,16,17.64001s-8.40002,1.95996-10.53998,5.06C4.22998,20.76001,3.5,18.45996,3.5,16C3.5,9.10999,9.10999,3.5,16,3.5S28.5,9.10999,28.5,16C28.5,18.45996,27.78003,20.75,26.54999,22.67999z" fill="#000000"></path><circle cx="16" cy="11" r="4.97" fill="#000000"></circle></svg>
+    </a>
+    
 </div>

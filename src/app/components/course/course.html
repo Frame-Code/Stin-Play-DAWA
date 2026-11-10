@@ -1,7 +1,92 @@
+<div class="container my-5">
+  <h3 class="mb-4">Cursos disponibles</h3>
+
+  <!-- Agregamos #coursesCarousel como referencia local de Angular -->
+  <div #coursesCarousel id="customCoursesCarousel" class="carousel slide">
+    
+    <div class="carousel-inner px-2">
+      
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row">
+          <div *ngFor="let course of courses.slice(0, 3)" class="col-12 col-md-4 mb-3">
+            <div class="card course-card h-100 d-flex flex-column justify-content-between p-3 shadow-sm">
+              <div>
+                <img class="card-img-top rounded" src="..." alt="Card image cap">
+                <div class="card-body px-0">
+                  <h3>{{ course.name }}</h3>
+                  <div>
+                    <p class="instructor text-muted">{{ course.instructor }}</p>
+                  </div>
+                  <p>Status: {{ course.isActive ? 'Active' : 'Inactive' }}</p>
+                </div>
+              </div>
+              <div>
+                <a href="#" class="btn btn-success btn-empezar w-100" [ngClass]="!course.isActive ? 'btn-secondary btn-lg' : ''">Empezar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item" *ngIf="courses.length > 3">
+        <div class="row">
+          <div *ngFor="let course of courses.slice(3, 6)" class="col-12 col-md-4 mb-3">
+            <div class="card course-card h-100 d-flex flex-column justify-content-between p-3 shadow-sm">
+              <div>
+                <img class="card-img-top rounded" src="..." alt="Card image cap">
+                <div class="card-body px-0">
+                  <h3>{{ course.name }}</h3>
+                  <div>
+                    <p class="instructor text-muted">{{ course.instructor }}</p>
+                  </div>
+                  <p>Status: {{ course.isActive ? 'Active' : 'Inactive' }}</p>
+                </div>
+              </div>
+              <div>
+                <a href="#" class="btn btn-success btn-empezar w-100" [ngClass]="!course.isActive ? 'btn-secondary btn-lg' : ''">Empezar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botones con eventos de Angular (click) para garantizar que funcionen -->
+    <button class="carousel-control-prev custom-control-prev" type="button" (click)="prevSlide()">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next custom-control-next" type="button" (click)="nextSlide()">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-3 shadow" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+
+  </div>
+</div>
+
+<!--
 <div class="course-container">
-    <div *ngFor="let course of courses">
-        <h3>{{ course.name }}</h3>
-        <p>Instructor: {{ course.instructor }}</p>
-        <p>Status: {{ course.isActive ? 'Active' : 'Inactive' }}</p>
+    <div class="row">
+        <div *ngFor="let course of courses" class="card course-card">
+            <div>
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h3>{{ course.name }}</h3>
+                    <div>
+                        <p class="instructor"> {{ course.instructor }}</p>
+                    </div>
+                    
+                    <p>Status: {{ course.isActive ? 'Active' : 'Inactive' }}</p>
+                </div>
+            </div>
+            <div>
+                <a href="#" class="btn btn-success btn-empezar" [ngClass]="!course.isActive ? 'btn-secondary btn-lg ': ''">Empezar</a>
+            </div>
+        </div>
     </div>
 </div>
+
+-->

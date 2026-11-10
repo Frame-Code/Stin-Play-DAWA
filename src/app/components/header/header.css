@@ -3,8 +3,14 @@
     background-color: white;
 }
 
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
 .icon-play {
-    width: 40px;
+    width: 7%;
 }
 
 h1 {
@@ -13,13 +19,13 @@ h1 {
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: lighter;
     letter-spacing: 1.5px;
 }
 
 .search {
-    width: 40%;
+    width: 32%;
     height: 20%;
 }
 
@@ -28,20 +34,18 @@ h3 {
 }
 
 .cursos {
-    padding-top: 15px;
-    font-size: 20px;
+    font-size: 100%;
     font-weight: bold;
     color: rgb(136, 136, 136);
 }
 
 .user-icon {
-    width: 50px;
+    width: 2.5%;
 }
 
 .btn-registrar-curso {
-    font-size: 20px;
+    font-size: 100%;
     font-weight: bold;
-    padding: 5px 20px;
     border-radius: 10px;
 }
 

@@ -1,10 +1,17 @@
 <div class="main">
     <app-header></app-header>
     <app-baner></app-baner>
-    <div>
-      <h2>Cursos disponibles</h2>
-      <app-course></app-course>
+    
+    <div class="main-course">
+      <div class="container mt-3 cursos">
+        <fieldset class="border rounded p-4 position-relative">
+          <legend class="w-auto px-2 fw-bold cursos-disponibles">Cursos disponibles</legend>
+          <app-course></app-course>
+        </fieldset>
+      </div>
     </div>
+    
+    
     <app-form-course></app-form-course>
     <app-footer></app-footer>
 </div>
