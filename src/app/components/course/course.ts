@@ -1,8 +1,6 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CourseDto } from './models/course.model';
-import {CommonModule} from '@angular/common';
-
-declare var bootstrap: any;
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-course',
@@ -11,31 +9,6 @@ declare var bootstrap: any;
   styleUrl: './course.css',
 })
 export class Course {
-
-  @ViewChild('coursesCarousel') carouselElement!: ElementRef;
-  private bsCarousel: any;
-
-  ngAfterViewInit() {
-    // Inicializamos el componente Carousel nativo de Bootstrap mediante JS
-    if (this.carouselElement) {
-      this.bsCarousel = new bootstrap.Carousel(this.carouselElement.nativeElement, {
-        interval: false // Desactiva el auto-slide si no lo quieres corriendo solo
-      });
-    }
-  }
-
-  nextSlide() {
-    if (this.bsCarousel) {
-      this.bsCarousel.next();
-    }
-  }
-
-  prevSlide() {
-    if (this.bsCarousel) {
-      this.bsCarousel.prev();
-    }
-  }
-
   courses: CourseDto[] = [
     {
       id: 1,
@@ -66,6 +39,6 @@ export class Course {
       name: 'State Management with NgRx',
       instructor: 'Charlie Davis',
       isActive: false,
-    }
-  ]
+    },
+  ];
 }
