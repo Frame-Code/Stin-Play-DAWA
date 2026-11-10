@@ -1,15 +1,19 @@
 <div>
-    <h2>Agregar nuevo curso</h2>
-    <div>
+    <div class="form-group">
         <label for="course-name">Nombre del curso: </label>
-        <input type="text" name="course-name" id="course-name" placeholder="Course Name" >
+        <input type="text" class="form-control" name="course-name" id="course-name" placeholder="Escribe el nombre del curso" >
     </div>
-    <div>
+    <div class="form-group">
         <label for="course-instructor">Instructor: </label>
-        <input type="text" name="course-instructor" id="course-instructor" placeholder="Instructor Name">
+        <input type="text" class="form-control" name="course-instructor" id="course-instructor" placeholder="Escribe el nombre del instructor">
     </div>
-    <div>
-        <label for="course-status">Activar curso: </label>
-        <input type="checkbox" name="course-status" id="course-status">
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" name="course-status" id="course-status">
+        <label class="form-check-label" for="course-status">Activar curso</label>
+    </div>
+
+    <div class="text-right d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary">Cancelar</button>
+        <button type="button" class="btn btn-success btn-guardar">Guardar</button>
     </div>
 </div>
