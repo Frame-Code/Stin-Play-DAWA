@@ -1,19 +1,19 @@
 <div>
     <div class="form-group">
         <label for="course-name">Nombre del curso: </label>
-        <input type="text" class="form-control" name="course-name" id="course-name" placeholder="Escribe el nombre del curso" >
+        <input type="text" [(ngModel)]="course.name" class="form-control" name="course-name" id="course-name" placeholder="Escribe el nombre del curso" >
     </div>
     <div class="form-group">
         <label for="course-instructor">Instructor: </label>
-        <input type="text" class="form-control" name="course-instructor" id="course-instructor" placeholder="Escribe el nombre del instructor">
+        <input type="text" [(ngModel)]="course.instructor" class="form-control" name="course-instructor" id="course-instructor" placeholder="Escribe el nombre del instructor">
     </div>
     <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" name="course-status" id="course-status">
+        <input type="checkbox" class="form-check-input" [(ngModel)]="course.isActive" name="course-status" id="course-status">
         <label class="form-check-label" for="course-status">Activar curso</label>
     </div>
 
     <div class="text-right d-flex justify-content-between">
-        <button type="button" class="btn btn-secondary">Cancelar</button>
-        <button type="button" class="btn btn-success btn-guardar">Guardar</button>
+        <button type="button" class="btn btn-secondary" (click)="cerrarModal.emit()">Cancelar</button>
+        <button type="button" class="btn btn-success btn-guardar" (click)="addCourse()">Guardar</button>
     </div>
 </div>

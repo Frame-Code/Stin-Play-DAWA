@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <app-form-course></app-form-course>
+                    <app-form-course (courseCreated)="handleCourseCreated($event)" (cerrarModal)="mostrarModal = false"></app-form-course>
                 </div>
             </div>
         </div>
